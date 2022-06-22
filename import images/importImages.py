@@ -30,12 +30,12 @@ def useSequence(path,pageNdx = 1):
   return pageNdx
 
 def importImage(newimage, pagenum):
-  UpdatePage(pagenum=pagenum)
+  updatePage(pagenum=pagenum)
   imgframe=scribus.createImage(0,0,8.5,11)
   scribus.loadImage(newimage, imgframe)
   return imgframe
 
-def UpdatePage(pagenum):
+def updatePage(pagenum):
   pageCount = scribus.pageCount()
   if (pagenum <= pageCount):
     pagename=scribus.gotoPage(pagenum)
